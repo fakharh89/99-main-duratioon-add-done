@@ -68,9 +68,8 @@ class _AddPostState extends State<AddPost> {
         durationForMinutes = 59 - ntpTime.minute;
         durationForHours = 23 - ntpTime.hour;
       });
-      durationForMinutes <= 0 && durationForHours <= 0
-          ? setNationalPost('0')
-          : null;
+      //durationForMinutes <= 0 &&
+      durationForHours <= 0 ? setNationalPost('0') : null;
     });
   }
 
@@ -81,9 +80,8 @@ class _AddPostState extends State<AddPost> {
       durationForMinutes = 59 - ntpTime.minute;
       durationForHours = 23 - ntpTime.hour;
     });
-    durationForMinutes <= 0 && durationForHours <= 0
-        ? setNationalPost('0')
-        : null;
+    //durationForMinutes <= 0 &&
+    durationForHours <= 0 ? setNationalPost('0') : null;
   }
 
   @override
