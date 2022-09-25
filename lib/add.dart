@@ -81,7 +81,7 @@ class _AddPostState extends State<AddPost> {
       durationForMinutes = 59 - ntpTime.minute;
       durationForHours = 23 - ntpTime.hour;
     });
-    durationForMinutes == 13 && durationForHours == 13
+    durationForMinutes <= 0 && durationForHours <= 0
         ? setNationalPost('0')
         : null;
   }
@@ -103,6 +103,7 @@ class _AddPostState extends State<AddPost> {
 
   @override
   Widget build(BuildContext context) {
+    print('built add');
     return SafeArea(
       child: Scaffold(
         body: Column(
